@@ -1,3 +1,5 @@
 #!/bin/bash
 
-typst compile main.pdf
+file="main.typ"
+
+typst compile ${file} --font-path fonts

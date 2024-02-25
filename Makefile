@@ -1,18 +1,21 @@
 # Makefile for typst compilation by yangsl
 # supports compiling all .typ files in the directory at once
 
-TYPFILE = $(wildcard *.typ)
+FILE = main.typ
 
 TYPST_COMPILER = compile
 
-TARGET = $(patsubst %.typ,%.pdf,${TYPFILE})
+FONT_PATH = "fonts/"
+FONT_FLAG = --font-path
+
+TARGET = main.pdf
 
 .PHONY: all clean
 
 all: $(TARGET)
 
-$(TARGET): %.pdf : %.typ
-	typst $(TYPST_COMPILER) $^
+$(TARGET): 
+	typst $(TYPST_COMPILER) ${FILE} ${FONT_FLAG} ${FONT_PATH}
 
 clean:
 	@rm -f *.pdf
