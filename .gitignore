@@ -1,4 +1,4 @@
 # typst compilation output pdf file
-main.pdf
-template.pdf
+*.pdf
+!main_*.pdf
 
