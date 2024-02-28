@@ -164,7 +164,7 @@
       show outline.entry.where(
           level: Level
         ): it => {
-          v(15pt, weak: true)
+          v(18pt, weak: true)
           strong(it)
       }
     }
