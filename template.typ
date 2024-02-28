@@ -197,3 +197,29 @@
       )
   }
 }
+
+
+// language icon
+#let icon(codepoint) = {
+  box(
+    height: 0.8em,
+    baseline: 0.05em,
+    image(codepoint)
+  )
+  h(0.1em)
+}
+
+// 三线表
+#let three-line-table = tablem.with(
+  render: (columns: auto, ..args) => {
+    tablex(
+      columns: columns,
+      auto-lines: false,
+      align: center + horizon,
+      hlinex(y: 0),
+      hlinex(y: 1),
+      ..args,
+      hlinex(),
+    )
+  }
+)
