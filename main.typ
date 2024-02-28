@@ -16,28 +16,23 @@
 
 
 = 实验原理
+
 参考文献引用@ZHU2023119062
 
+
 = 实验内容
+
 == 实验内容1
+
 == 实验内容2
 
+
 = 结果与讨论
+
 == 结果
+
 == 讨论
+
 
 = 结论
 
-
-#pagebreak()
-
-
-#{
-  // set align(center)
-
-  bibliography(
-    "refs.bib",
-    title: "参考文献",
-    style: "gb-7714-2015-numeric",
-    )
-}

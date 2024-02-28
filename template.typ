@@ -132,7 +132,7 @@
     grid(
       columns: (80pt, 160pt),
       row-gutter: 1em,
-      column-gutter: 10pt,
+      column-gutter: 3pt,
       info-key(text("姓") + h(2em) + text("名：")), info-value[#Name],
       info-key(text("学") + h(2em) + text("号：")), info-value[#StudentID],
       info-key(text("学") + h(2em) + text("院：")), info-value[#School],
@@ -147,9 +147,9 @@
       [#Date.at(0)] + "年" + [#Date.at(1)] + "月" + [#Date.at(2)] + "日",
     )
 
-  }
-
   pagebreak(weak: true)
+
+  }
 
 
   // 目录
@@ -174,13 +174,26 @@
       indent: 1em,
     )
 
+    pagebreak(weak: true)
   }
-
-  pagebreak(weak: true)
 
 
   // 正文
-  counter(page).update(1)
+  {
+    counter(page).update(1)
 
-  body
+    body
+  }
+
+
+  // 参考文献
+  {
+    pagebreak()
+
+    bibliography(
+      "refs.bib",
+      title: "参考文献",
+      style: "gb-7714-2015-numeric",
+      )
+  }
 }
