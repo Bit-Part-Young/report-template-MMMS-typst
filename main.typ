@@ -61,6 +61,17 @@
 这里是结论。这里是结论。这里是结论。这里是结论。这里是结论。
 
 
+// 参考文献
+#{
+  pagebreak()
+
+  bibliography(
+    "refs.bib",
+    title: "参考文献",
+    style: "gb-7714-2015-numeric",
+  )
+}
+
 #[
 
 #pagebreak(weak: true)
@@ -74,42 +85,41 @@
 #show: codly-init.with()
 #codly(
   languages: (
-    // 这里只能写 rust，
     python: (name: "Python", icon: icon("assets/brand-python.svg"), color: rgb("#CE412B")),
     rust: (name: "Rust", icon: icon("assets/brand-rust.svg"), color: rgb("#3572A5")),
     cpp: (name: "C++", icon: icon("assets/brand-cpp.svg"), color: rgb("#3572A5")),
   )
-);
+)
 
 == Python代码
 
 Python源代码：
 
 ```python
-  def main():
-      operation = input("Enter operator (+, -, *, /): ")
-      num1 = float(input("Enter first number: "))
-      num2 = float(input("Enter second number: "))
+def main():
+    operation = input("Enter operator (+, -, *, /): ")
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
 
-      if operation == '+':
-          result = num1 + num2
-      elif operation == '-':
-          result = num1 - num2
-      elif operation == '*':
-          result = num1 * num2
-      elif operation == '/':
-          if num2 == 0:
-              print("Error: Division by zero!")
-              return
-          result = num1 / num2
-      else:
-          print("Error: Invalid operator!")
-          return
+    if operation == '+':
+        result = num1 + num2
+    elif operation == '-':
+        result = num1 - num2
+    elif operation == '*':
+        result = num1 * num2
+    elif operation == '/':
+        if num2 == 0:
+            print("Error: Division by zero!")
+            return
+        result = num1 / num2
+    else:
+        print("Error: Invalid operator!")
+        return
 
-      print("Result:", result)
+    print("Result:", result)
 
-  if __name__ == "__main__":
-      main()
+if __name__ == "__main__":
+    main()
 ```
 
 == C++ 代码

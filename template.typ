@@ -184,18 +184,6 @@
 
     body
   }
-
-
-  // 参考文献
-  {
-    pagebreak()
-
-    bibliography(
-      "refs.bib",
-      title: "参考文献",
-      style: "gb-7714-2015-numeric",
-      )
-  }
 }
 
 
