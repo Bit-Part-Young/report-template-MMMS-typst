@@ -170,7 +170,7 @@
     }
 
     outline(
-      title: text("目") + h(1em) + text("录"),
+      title: text("目录"), 
       indent: 1em,
     )
 
