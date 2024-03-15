@@ -7,7 +7,7 @@
   Name: "张三",
   StudentID: "XXXXXXXXXXXX",
   School: "材料科学与工程学院",
-  Date: (2024, 02, 28),
+//   Date: (2024, 02, 28),
 )
 
 
@@ -74,13 +74,12 @@
   )
 }
 
-#[
 
 #pagebreak(weak: true)
 
 #set heading(numbering: none)
 #counter(heading).update(0)
-#set heading(level: 2, numbering: "A.1")
+// #set heading(level: 2, numbering: "A")
 
 = 附录A
 
@@ -203,4 +202,4 @@ pub fn main() {
 这里是附录B。这里是附录B。这里是附录B。这里是附录B。这里是附录B。
 这里是附录B。这里是附录B。这里是附录B。这里是附录B。这里是附录B。
 
-]
+// ]

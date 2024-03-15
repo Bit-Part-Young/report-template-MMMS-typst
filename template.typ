@@ -1,6 +1,9 @@
 #import "@preview/codly:0.1.0": *
 #import "@preview/tablex:0.0.6": tablex, hlinex
 #import "@preview/tablem:0.1.0": tablem
+#import "@preview/outrageous:0.1.0"
+
+
 
 
 // reference: https://github.com/lucifer1004/pkuthss-typst/blob/main/template.typ
@@ -41,7 +44,7 @@
   Name: "",
   StudentID: "",
   School: "",
-  Date: (),
+  // Date: (),
   body
   ) = {
   
@@ -144,7 +147,8 @@
       font: 字体.黑体,
       size: 字号.三号,
       weight: "bold",
-      [#Date.at(0)] + "年" + [#Date.at(1)] + "月" + [#Date.at(2)] + "日",
+      datetime.today().display("[year]年[month]月[day]日"),
+      // [#Date.at(0)] + "年" + [#Date.at(1)] + "月" + [#Date.at(2)] + "日",
     )
 
   pagebreak(weak: true)
@@ -168,6 +172,10 @@
           strong(it)
       }
     }
+    show outline.entry: outrageous.show-entry.with(
+      ..outrageous.presets.typst,
+      fill: (none, auto),
+    )
 
     outline(
       title: text("目录"), 
